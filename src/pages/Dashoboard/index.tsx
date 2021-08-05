@@ -11,6 +11,8 @@ import Talk from '../../assets/icons/Talk.png';
 import Build from '../../assets/icons/Build.png';
 
 import { Container, ContainerCourses } from './styles';
+import { useNavigation } from '@react-navigation/native';
+import { useCallback } from 'react';
 
 export interface PropsData extends PropsCourses {
   id: string;
@@ -55,6 +57,12 @@ export function Dashboard() {
       imageDiscipline: Build,
     },
   ];
+
+  const { navigate } = useNavigation();
+
+  const handleNavigate = useCallback(() => {
+    navigate('Classes');
+  }, [navigate]);
   return (
     <Container>
       <Header />
@@ -64,7 +72,9 @@ export function Dashboard() {
       <ContainerCourses
         data={data}
         keyExtractor={item => item.id}
-        renderItem={({ item }) => <Courses data={item} />}
+        renderItem={({ item }) => (
+          <Courses data={item} onPress={handleNavigate} />
+        )}
       />
     </Container>
   );

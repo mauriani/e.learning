@@ -23,12 +23,13 @@ export interface PropsCourses {
 
 interface Props {
   data: PropsCourses;
+  onPress: () => void;
 }
 
-export function Courses({ data }: Props) {
+export function Courses({ onPress, data }: Props) {
   return (
     <Container>
-      <Card>
+      <Card onPress={onPress}>
         <CardInfo>
           <Image source={data.imageDiscipline} />
           <Title>{data.discipline}</Title>

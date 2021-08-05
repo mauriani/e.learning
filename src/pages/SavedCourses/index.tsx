@@ -45,7 +45,7 @@ export function SavedCourses() {
       <ContainerCoursesSaves
         data={data}
         keyExtractor={item => item.id}
-        renderItem={({ item }) => <Courses data={item} />}
+        renderItem={({ item }) => <Courses data={item} onPress={() => {}} />}
       />
     </Container>
   );
