@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useRoute } from '@react-navigation/native';
 import { HeaderFavorite } from '../../components/HeaderFavorite';
 
 import {
@@ -8,24 +8,36 @@ import {
   TopoCourses,
   Title,
   Description,
-  Card,
-  TitleClasses,
+  PlayVideo,
 } from './styles';
+import { PlayCourses } from '../../components/PlayCourses';
+
+interface RouteParams {
+  classes: string;
+  discipline: string;
+}
 
 export function Classes() {
+  const { params } = useRoute();
+
+  const routeParams = params as RouteParams;
+
   return (
     <Container>
       <HeaderFavorite />
       <ContainerClasses>
         <TopoCourses>
-          <Title>Matemática</Title>
-          <Description>16 Aulas</Description>
+          <Title>{routeParams.discipline}</Title>
+          <Description>{routeParams.classes}</Description>
         </TopoCourses>
       </ContainerClasses>
 
-      <Card>
-        <TitleClasses>Introdução à teoria matemática</TitleClasses>
-      </Card>
+      <PlayVideo>
+        <PlayCourses />
+        <PlayCourses />
+        <PlayCourses />
+        <PlayCourses />
+      </PlayVideo>
     </Container>
   );
 }

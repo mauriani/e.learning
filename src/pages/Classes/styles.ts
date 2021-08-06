@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import Feather from 'react-native-vector-icons/Feather';
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
 
 export const Container = styled.View`
@@ -38,23 +39,8 @@ export const Description = styled.Text`
   font-family: ${({ theme }) => theme.fonts.robotoRegular};
 `;
 
-export const Card = styled.View`
-  background-color: ${({ theme }) => theme.colors.shape};
-  height: ${RFValue(100)}px;
-  border-radius: 16px;
-
-  margin-top: 60px;
-
-  margin-left: 61px;
-  margin-right: 24px;
-`;
-
-export const TitleClasses = styled.Text`
-  font-size: ${RFValue(15)}px;
-  color: ${({ theme }) => theme.colors.base};
-  font-family: ${({ theme }) => theme.fonts.regular};
-
-  line-height: 20px;
-
-  padding: 16px 58px;
+export const PlayVideo = styled.View`
+  flex: 1;
+  margin-top: 92px;
+  width: 100%;
 `;

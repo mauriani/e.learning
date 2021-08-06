@@ -60,9 +60,16 @@ export function Dashboard() {
 
   const { navigate } = useNavigation();
 
-  const handleNavigate = useCallback(() => {
-    navigate('Classes');
-  }, [navigate]);
+  const handleNavigate = useCallback(
+    item => {
+      navigate('Classes', {
+        discipline: item.discipline,
+        classes: item.classes,
+      });
+    },
+    [navigate],
+  );
+
   return (
     <Container>
       <Header />
@@ -73,7 +80,7 @@ export function Dashboard() {
         data={data}
         keyExtractor={item => item.id}
         renderItem={({ item }) => (
-          <Courses data={item} onPress={handleNavigate} />
+          <Courses data={item} onPress={() => handleNavigate(item)} />
         )}
       />
     </Container>
