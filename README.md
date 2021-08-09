@@ -1,7 +1,6 @@
 
-<div>
-  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b7beddaf-8504-48ad-be43-541009617550/Untitled.png](https://user-images.githubusercontent.com/32397288/128752768-182c82ff-2d04-453d-8f59-d80695cf5fdc.png)
-</div>
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b7beddaf-8504-48ad-be43-541009617550/Untitled.png](https://user-images.githubusercontent.com/32397288/128752768-182c82ff-2d04-453d-8f59-d80695cf5fdc.png)
 
 
 ## Sobre o projeto
@@ -21,7 +20,7 @@ Antes de iniciar você precisar ter o ambiente configurado.
 - React Native cli
 
 ```
-git clone <https://github.com/mauriani/Clone-PicPay>
+git clone https://github.com/mauriani/e.learning.git
 
 ```
 
