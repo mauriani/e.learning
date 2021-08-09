@@ -6,7 +6,7 @@ Esse é o layot de uma aplicação direcionada para estudantes para assistiram s
 
 ## 🚀 Tecnologias usadas
 
-- React Native Cli
+- React native cli
 
 ## 💻Instalação
 
