@@ -18,6 +18,8 @@ export const Card = styled(RectButton)`
 
   flex-direction: row;
   justify-content: space-between;
+
+  margin: ${RFValue(4)}px; ;
 `;
 
 export const CardInfo = styled.View``;
