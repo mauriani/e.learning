@@ -1,22 +1,15 @@
 import React from 'react';
 
-import {
-  Container,
-  Background,
-  ImageFront,
-  Title,
-  Description,
-  Button,
-  ButtonText,
-} from './styles';
-
-import LogoBackground from '../../assets/e.learning.png';
-import Person from '../../assets/person.png';
-
 import { useNavigation } from '@react-navigation/native';
 import { useCallback } from 'react';
 
-const SignIn: React.FC = () => {
+import LogoBackground from '../../assets/e.learning.png';
+import Person from '../../assets/person.png';
+import { Input } from '../../components/Input';
+
+import { Container, Background, ImageFront } from './styles';
+
+export function SignIn() {
   const { navigate } = useNavigation();
 
   const handleNavigate = useCallback(() => {
@@ -29,15 +22,8 @@ const SignIn: React.FC = () => {
         <ImageFront source={Person} resizeMode="cover" />
       </Background>
 
-      <Title>Aprenda da melhor forma</Title>
-      <Description>
-        Entre na plataforma e acesse cursos de diversas áreas de conhecimento.
-      </Description>
-      <Button onPress={handleNavigate}>
-        <ButtonText>Começar os estudos</ButtonText>
-      </Button>
+      <Input icon="user" />
+      <Input icon="user" />
     </Container>
   );
-};
-
-export default SignIn;
+}

@@ -1,7 +1,6 @@
 import styled from 'styled-components/native';
 import { FlatList } from 'react-native';
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
-import { getBottomSpace } from 'react-native-iphone-x-helper';
 
 import { PropsData } from '.';
 

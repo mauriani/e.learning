@@ -31,7 +31,7 @@ export function PlayCourses({
 }: Props) {
   return (
     <Container>
-      <Card onPress={onPress}>
+      <Card onPress={onPress} {...rest}>
         <Title>{discipline}</Title>
         <ClassData>
           <ClassText>{classes}</ClassText>

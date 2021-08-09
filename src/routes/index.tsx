@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 const App = createStackNavigator();
 
+import { SignIn } from '../pages/SignIn';
 import { Classes } from '../pages/Classes';
 import { ViewClass } from '../pages/ViewClass';
 
@@ -14,6 +15,12 @@ const Routes: React.FC = () => (
       headerShown: false,
     }}
   >
+    <App.Screen
+      name="SignIn"
+      component={SignIn}
+      options={{ headerShown: false }}
+    />
+
     <App.Screen
       name="Dashboard"
       component={BottomNavigator}

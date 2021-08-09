@@ -14,6 +14,8 @@ export const Container = styled.View`
   align-items: center;
 
   padding: 0 26px;
+
+  margin-bottom: 10px;
 `;
 
 export const InputText = styled.TextInput`
