@@ -2,7 +2,7 @@
 
 ## Sobre o projeto
 
-Esse projeto foi realizado usando react native cli, nele foi feito o clone mobile do pic pay.
+Esse é o layot de uma aplicação direcionada para estudantes para assistiram suas videoaulas.
 
 ## 🚀 Tecnologias usadas
 
@@ -26,7 +26,7 @@ Após o download do repositório em sua máquina basta realizar os seguintes com
 ```
 
 // acessar a basta do projeto
-cd Clone PicPay
+cd Clone e.learning
 // instalar todas as dependencias do projeto
 yarn install ou npm install
 
@@ -37,7 +37,7 @@ yarn install ou npm install
 ```
 
 // para executa você pode usar o expo instalado no seu celular
-cd Clone PicPay
+cd e.learning
 npx react-native run-android ou npx react-native run-ios
 
 ```
