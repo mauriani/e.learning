@@ -16,23 +16,35 @@ import {
 interface Props {
   discipline: string;
   classes: string;
+  time: string;
+  status: 'completo' | 'pendente';
+  onPress: () => void;
 }
 
-export function PlayCourses() {
+export function PlayCourses({
+  discipline,
+  classes,
+  time,
+  status,
+  onPress,
+  ...rest
+}: Props) {
   return (
     <Container>
-      <Card>
-        <Title>Introdução à teoria matemática</Title>
+      <Card onPress={onPress}>
+        <Title>{discipline}</Title>
         <ClassData>
-          <ClassText>Aula 01</ClassText>
+          <ClassText>{classes}</ClassText>
 
           <ClassTime>
             <IconTime name="clock" />
-            <ClassText>5min</ClassText>
+            <ClassText>{time}</ClassText>
           </ClassTime>
 
           <Status>
-            <StatusText>Completo!</StatusText>
+            <StatusText>
+              {status === 'completo' ? 'Completo' : 'Pendente'}
+            </StatusText>
           </Status>
         </ClassData>
       </Card>

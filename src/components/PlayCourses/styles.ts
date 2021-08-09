@@ -1,6 +1,7 @@
 import styled from 'styled-components/native';
+import { RectButton } from 'react-native-gesture-handler';
 import Feather from 'react-native-vector-icons/Feather';
-import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
+import { RFValue } from 'react-native-responsive-fontsize';
 
 export const Container = styled.View`
   width: ${RFValue(326)}px;
@@ -12,7 +13,7 @@ export const Container = styled.View`
   margin-bottom: 16px;
 `;
 
-export const Card = styled.View`
+export const Card = styled(RectButton)`
   flex: 1;
   width: ${RFValue(290)}px;
   height: ${RFValue(100)}px;

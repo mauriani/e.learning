@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { Courses, PropsCourses } from '../../components/Courses';
 import { Header } from '../../components/Header';
 import { ContainerCoursesTopo } from '../../components/ContainerCoursesTopo';
@@ -11,8 +12,6 @@ import Talk from '../../assets/icons/Talk.png';
 import Build from '../../assets/icons/Build.png';
 
 import { Container, ContainerCourses } from './styles';
-import { useNavigation } from '@react-navigation/native';
-import { useCallback } from 'react';
 
 export interface PropsData extends PropsCourses {
   id: string;

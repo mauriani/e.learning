@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useRoute } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
+
 import { HeaderFavorite } from '../../components/HeaderFavorite';
+import { PlayCourses } from '../../components/PlayCourses';
 
 import {
   Container,
@@ -10,7 +13,6 @@ import {
   Description,
   PlayVideo,
 } from './styles';
-import { PlayCourses } from '../../components/PlayCourses';
 
 interface RouteParams {
   classes: string;
@@ -21,6 +23,12 @@ export function Classes() {
   const { params } = useRoute();
 
   const routeParams = params as RouteParams;
+
+  const { navigate } = useNavigation();
+
+  const handleNavigate = useCallback(() => {
+    navigate('ViewClass');
+  }, [navigate]);
 
   return (
     <Container>
@@ -33,10 +41,13 @@ export function Classes() {
       </ContainerClasses>
 
       <PlayVideo>
-        <PlayCourses />
-        <PlayCourses />
-        <PlayCourses />
-        <PlayCourses />
+        <PlayCourses
+          discipline="Introdução à teoria matemática"
+          classes="Aula 01"
+          time="5min"
+          status="completo"
+          onPress={handleNavigate}
+        />
       </PlayVideo>
     </Container>
   );
